@@ -21,3 +21,9 @@ pipenv shell
 You're good to go! That was much easier than last time I tried installing Python.
 
 Also, when you're done with the virtualenv shell, you can kill it with command `exit` or by pressing `Ctrl+D`.
+
+## Usage
+
+### Admin
+
+You can access the admin console with username `admin` and password `adminpassword`.

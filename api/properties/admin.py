@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import ZillowProperty, Property
 
-# Register your models here.
+admin.site.register(Property)
+admin.site.register(ZillowProperty)

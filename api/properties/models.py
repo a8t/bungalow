@@ -2,7 +2,11 @@ from django.db import models
 
 
 class Property(models.Model):
-    verbose_name_plural = "Properties"
+    class Meta:
+        verbose_name_plural = "properties"
+
+    def __str__(self):
+        return f'{self.address}, {self.city}, {self.state}'
 
     SQUARE_FEET = 'SqFt'
     AREA_UNITS = [
@@ -50,7 +54,9 @@ class Property(models.Model):
 
 
 class ZillowProperty(Property):
-    verbose_name_plural = "Zillow properties"
+
+    class Meta:
+        verbose_name_plural = "Zillow properties"
 
     link = models.URLField(default='')
     zillow_id = models.CharField(max_length=255)

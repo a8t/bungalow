@@ -14,7 +14,7 @@ class Property(models.Model):
     # PositiveIntegerField includes 0 even though that's mathematically incorrect
     # (and also kinda messed up for a house to not have a bathroom...)
     home_size = models.PositiveIntegerField(null=True)
-    bathrooms = models.PositiveIntegerField(null=True)
+    bathrooms = models.DecimalField(decimal_places=3, max_digits=5)
     bedrooms = models.PositiveIntegerField(null=True)
     property_size = models.PositiveIntegerField(null=True)
 
@@ -36,7 +36,7 @@ class Property(models.Model):
         choices=HOME_TYPES, default=SINGLE_FAMILY, max_length=255)
 
     last_sold_date = models.DateField(null=True)
-    last_sold_price = models.DateField(null=True)
+    last_sold_price = models.PositiveIntegerField(null=True)
     price = models.PositiveIntegerField(null=True)
     rent_price = models.PositiveIntegerField(null=True)
     tax_value = models.DecimalField(decimal_places=1, max_digits=20)
@@ -46,7 +46,7 @@ class Property(models.Model):
     address = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
     state = models.CharField(max_length=255)
-    zipcode = models.PositiveIntegerField(null=True)
+    zipcode = models.CharField(max_length=255)
 
 
 class ZillowProperty(Property):

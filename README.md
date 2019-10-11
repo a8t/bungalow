@@ -5,26 +5,19 @@
 ## Installation
 
 1. Clone this repository.
-2. Install Python 3.7.4
-   1. Install [pyenv](https://github.com/yyuu/pyenv#installation).
-   2. Install [pyenv-virtualenv](https://github.com/yyuu/pyenv-virtualenv#installation).
-   3. Run `pyenv install 3.7.4`
-3. Create a new virtualenv called `andybungalow`:
+2. [Install the `pipenv` tool](https://github.com/pypa/pipenv#installation) if necessary.
+3. Install dependencies:
 
 ```
-pyenv virtualenv 3.7.4 andybungalow
+pipenv install
 ```
 
-4. Set the local virtualenv to `andybungalow`:
+4. Activate the project's virtualenv:
 
 ```
-pyenv local andybungalow
+pipenv shell
 ```
 
-5. Reload the `pyenv` environment:
+You're good to go! That was much easier than last time I tried installing Python.
 
-```
-pyenv rehash
-```
-
-6. You can make sure it worked with `pyenv local`. The result should be `andybungalow`.
+Also, when you're done with the virtualenv shell, you can kill it with command `exit` or by pressing `Ctrl+D`.

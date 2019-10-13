@@ -56,6 +56,14 @@ python manage.py runserver
 
 As usual with Django projects, you can create an admin user using `python manage.py createsuperuser` once you've. This lets you log on at `localhost:8000/admin`.
 
+## Tests
+
+Run the tests with:
+
+```
+python manage.py test
+```
+
 # API docs
 
 Once this API is running, you can expect the following interface from the `/properties/` and `/zillow_properties/` endpoints:

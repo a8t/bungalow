@@ -55,3 +55,81 @@ python manage.py runserver
 ### Admin
 
 As usual with Django projects, you can create an admin user using `python manage.py createsuperuser` once you've. This lets you log on at `localhost:8000/admin`.
+
+# API docs
+
+Once this API is running, you can expect a standard REST interface from the `/properties/` and `/zillow_properties/` endpoints, including query parameters.
+
+## GET
+
+`GET /properties/`: get all Properties
+
+`GET /properties/{id}`: get Property with this id
+
+`GET /zillow_properties/`: get all Zillow properties
+
+`GET /zillow_properties/{id}`: get Zillow property with this id
+
+## POST
+
+`POST /properties/`: Creates a Property with a POST body adhering to the following shape, attached as JSON:
+
+```
+area_unit : "SqFt" (the only value available right now)
+home_size : int
+bathrooms : float
+bedrooms : int
+property_size : int
+home_type : "SingleFamily"
+          | "Apartment"
+          | "Condominium"
+          | "Duplex"
+          | "Miscellaneous"
+          | "MultiFamily2To4"
+          | "VacantResidentialLand"
+last_sold_date : string as YYYY-MM-DD
+last_sold_price : int
+price : int
+rent_price : int
+tax_value : float
+tax_year : int
+year_built : int
+address : string
+city : string
+state : string
+zipcode : string
+```
+
+`POST /zillow_properties/`: Creates a Zillow Property with a POST body adhering to the following shape, attached as JSON:
+
+```
+area_unit : "SqFt" (the only value available right now)
+home_size : int
+bathrooms : float
+bedrooms : int
+property_size : int
+home_type : "SingleFamily"
+          | "Apartment"
+          | "Condominium"
+          | "Duplex"
+          | "Miscellaneous"
+          | "MultiFamily2To4"
+          | "VacantResidentialLand"
+last_sold_date : string as YYYY-MM-DD
+last_sold_price : int
+price : int
+rent_price : int
+tax_value : float
+tax_year : int
+year_built : int
+address : string
+city : string
+state : string
+zipcode : string
+link : string
+zillow_id : string
+rentzestimate_amount : int
+rentzestimate_last_updated : string as YYYY-MM-DD
+zestimate_amount : int
+zestimate_last_updated : string as YYYY-MM-DD
+```

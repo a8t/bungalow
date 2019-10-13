@@ -30,8 +30,6 @@ Also, when you're done with the virtualenv shell, you can kill it with command `
 
 ## Usage
 
-First: `cd server`.
-
 ### Migrate
 
 Initialize the database with a migration:

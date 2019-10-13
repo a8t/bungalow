@@ -58,7 +58,7 @@ As usual with Django projects, you can create an admin user using `python manage
 
 # API docs
 
-Once this API is running, you can expect a standard REST interface from the `/properties/` and `/zillow_properties/` endpoints, including query parameters.
+Once this API is running, you can expect the following interface from the `/properties/` and `/zillow_properties/` endpoints:
 
 ## GET
 
@@ -69,6 +69,12 @@ Once this API is running, you can expect a standard REST interface from the `/pr
 `GET /zillow_properties/`: get all Zillow properties
 
 `GET /zillow_properties/{id}`: get Zillow property with this id
+
+## DELETE
+
+`DELETE /properties/{id}`: delete Property with this id
+
+`DELETE /zillow_properties/{id}`: delete Zillow property with this id
 
 ## POST
 
